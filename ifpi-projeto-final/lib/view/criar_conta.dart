@@ -52,7 +52,7 @@ class _CriarContaState extends State<CriarConta> {
                         borderSide: BorderSide(color: Colors.green))),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(top: 20.0),
               child: TextField(
                 decoration: InputDecoration(
@@ -65,32 +65,32 @@ class _CriarContaState extends State<CriarConta> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20.0),
+              padding: const EdgeInsets.only(top: 20.0),
               child: TextField(
                 decoration: InputDecoration(
                     labelText: 'Senha',
                     suffixIcon: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.remove_red_eye_rounded)),
-                    focusedBorder: OutlineInputBorder(
+                        icon: const Icon(Icons.remove_red_eye_rounded)),
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.green),
                     ),
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.green))),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20.0),
+              padding: const EdgeInsets.only(top: 20.0),
               child: TextField(
                 decoration: InputDecoration(
                     labelText: 'Confirmar Senha',
                     suffixIcon: IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.remove_red_eye_rounded)),
-                    focusedBorder: OutlineInputBorder(
+                        icon: const Icon(Icons.remove_red_eye_rounded)),
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.green),
                     ),
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.green))),
               ),
             ),

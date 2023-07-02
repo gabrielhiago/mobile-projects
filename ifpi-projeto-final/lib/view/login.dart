@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () {
                   Navigator.pushNamed(context, '/recuperarSenha');
                 },
-                child: Text(
+                child: const Text(
                   'Esqueceu a Senha?',
                   style: TextStyle(
                       color: Colors.green, fontWeight: FontWeight.bold),

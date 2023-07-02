@@ -22,10 +22,10 @@ class _ListaContatosState extends State<ListaContatos> {
         child: ListView(
           children: [
             ListTile(
-              leading: Icon(Icons.person_2_rounded),
-              title: Text('Fulano de Tal'),
-              subtitle: Text('fulanodetal@gmail.com'),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
+              leading: const Icon(Icons.person_2_rounded),
+              title: const Text('Fulano de Tal'),
+              subtitle: const Text('fulanodetal@gmail.com'),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded),
               onTap: () {
                 Navigator.pushNamed(context, '/infoContato');
               },

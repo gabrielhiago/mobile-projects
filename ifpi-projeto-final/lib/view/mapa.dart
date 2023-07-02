@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
 
 class Mapa extends StatefulWidget {
   const Mapa({super.key});
@@ -12,30 +11,23 @@ class Mapa extends StatefulWidget {
 
 class _MapaState extends State<Mapa> {
   _localizacaoAtual() async {
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
   }
 
-  Set<Marker> _marcadores = {};
+  final Set<Marker> _marcadores = {};
   final Completer<GoogleMapController> _controller =
       Completer<GoogleMapController>();
 
   late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(-5.088849181413348, -42.811251074446076);
 
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
 
   _carregarMarcadores() {
     Set<Marker> marcadoresUsuarios = {};
-    Marker marcadorIfpi = Marker(
+    Marker marcadorIfpi = const Marker(
         markerId: MarkerId('IFPI'),
         position: LatLng(-5.088849181413348, -42.811251074446076));
     marcadoresUsuarios.add(marcadorIfpi);
     setState(() {
-      var _marcadores = marcadoresUsuarios;
     });
   }
 
@@ -49,6 +41,7 @@ class _MapaState extends State<Mapa> {
     _localizacaoAtual();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
