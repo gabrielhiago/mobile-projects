@@ -6,8 +6,14 @@ import 'package:projeto_final/view/home.dart';
 import 'package:projeto_final/view/lista_contatos.dart';
 import 'package:projeto_final/view/mapa.dart';
 import 'package:projeto_final/view/recuperar_senha.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
