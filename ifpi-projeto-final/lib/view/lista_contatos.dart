@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:projeto_final/controller/firebase_service.dart';
 
 class ListaContatos extends StatefulWidget {
@@ -38,7 +37,7 @@ class _ListaContatosState extends State<ListaContatos> {
                   },
                 );
               } else {
-                return Center(child: CircularProgressIndicator());
+                return const Center(child: CircularProgressIndicator());
               }
             }));
   }

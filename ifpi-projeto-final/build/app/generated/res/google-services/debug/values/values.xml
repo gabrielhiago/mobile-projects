@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="default_web_client_id" translatable="false">333822442921-1p9f15cujdfg4rjancch23kr155v7ruu.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://projetofinal-391021-default-rtdb.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">333822442921</string>
     <string name="google_api_key" translatable="false">AIzaSyAuGi7sHN54Ss452fI0DIipKN2Qdc44khk</string>
     <string name="google_app_id" translatable="false">1:333822442921:android:5799c1677934a2558918b8</string>

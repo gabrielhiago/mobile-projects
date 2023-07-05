@@ -7,8 +7,8 @@ Future<List> getContatos() async {
   CollectionReference collectionReferenceContatos =
       bancoDados.collection('contatos');
   QuerySnapshot queryContatos = await collectionReferenceContatos.get();
-  queryContatos.docs.forEach((documento) {
+  for (var documento in queryContatos.docs) {
     contatos.add(documento.data());
-  });
+  }
   return contatos;
 }

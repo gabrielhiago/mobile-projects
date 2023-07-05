@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '333822442921',
     projectId: 'projetofinal-391021',
     authDomain: 'projetofinal-391021.firebaseapp.com',
+    databaseURL: 'https://projetofinal-391021-default-rtdb.firebaseio.com',
     storageBucket: 'projetofinal-391021.appspot.com',
   );
 
@@ -57,6 +58,7 @@ class DefaultFirebaseOptions {
     appId: '1:333822442921:android:5799c1677934a2558918b8',
     messagingSenderId: '333822442921',
     projectId: 'projetofinal-391021',
+    databaseURL: 'https://projetofinal-391021-default-rtdb.firebaseio.com',
     storageBucket: 'projetofinal-391021.appspot.com',
   );
 
@@ -65,6 +67,7 @@ class DefaultFirebaseOptions {
     appId: '1:333822442921:ios:ca1dcde8629ee4c58918b8',
     messagingSenderId: '333822442921',
     projectId: 'projetofinal-391021',
+    databaseURL: 'https://projetofinal-391021-default-rtdb.firebaseio.com',
     storageBucket: 'projetofinal-391021.appspot.com',
     iosClientId: '333822442921-0pq4gdnbetruim80h5f74uk1ek9qf5du.apps.googleusercontent.com',
     iosBundleId: 'com.example.projetoFinal',
@@ -75,6 +78,7 @@ class DefaultFirebaseOptions {
     appId: '1:333822442921:ios:ca1dcde8629ee4c58918b8',
     messagingSenderId: '333822442921',
     projectId: 'projetofinal-391021',
+    databaseURL: 'https://projetofinal-391021-default-rtdb.firebaseio.com',
     storageBucket: 'projetofinal-391021.appspot.com',
     iosClientId: '333822442921-0pq4gdnbetruim80h5f74uk1ek9qf5du.apps.googleusercontent.com',
     iosBundleId: 'com.example.projetoFinal',

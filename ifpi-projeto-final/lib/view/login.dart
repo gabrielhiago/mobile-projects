@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:projeto_final/view/home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -8,6 +10,24 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _emailController = TextEditingController();
+  final _senhaController = TextEditingController();
+
+  login() async {
+    try {
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => const HomePage()));
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Usuário ou senha inválidos')));
+      } else if (e.code == 'wrong-password') {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Usuário ou senha inválidos')));
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,12 +43,13 @@ class _LoginPageState extends State<LoginPage> {
                 margin: const EdgeInsets.only(top: 50.0),
                 child: Image.asset('assets/images/logo_ifpi.png'),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: TextField(
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: TextFormField(
                   autofocus: true,
-                  decoration: InputDecoration(
-                      labelText: 'Usuário',
+                  controller: _emailController,
+                  decoration: const InputDecoration(
+                      labelText: 'E-mail',
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.green),
                       ),
@@ -36,10 +57,11 @@ class _LoginPageState extends State<LoginPage> {
                           borderSide: BorderSide(color: Colors.green))),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: TextField(
-                  decoration: InputDecoration(
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: TextFormField(
+                  controller: _senhaController,
+                  decoration: const InputDecoration(
                       labelText: 'Senha',
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.green),
@@ -55,8 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                     margin: const EdgeInsets.all(20),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamedAndRemoveUntil(
-                            context, '/homePage', (route) => false);
+                        login();
                       },
                       style: const ButtonStyle(
                           fixedSize: MaterialStatePropertyAll(Size(120, 40)),
